@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGC Nexus</title>
+    <style>
+        /* CSS styles */
+        body {
+            background-color: #1a1a1a;
+            color: #f8f8f8;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around; /* Evenly space out the links */
+            align-items: center;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f8f8f8;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347; /* Tomato color for hover effect */
+        }
+
+        .description {
+            text-align: center;
+            margin-top: 150px;
+            padding: 20px;
+        }
+
+        .description h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .description p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #222;
+            color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top:hover {
+            background-color: #e5533c;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                background-color: #222;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                display: none;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                color: #f8f8f8;
+                font-size: 1.5em;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="menu-toggle">&#9776;</span>
+            <ul>
+                <li><a id="url1" href="Sites/PokeSearch.html">PokeSearch</a></li>
+                <li><a href="Sites/VGCFlip.html">VGCFlip</a></li>
+                <li class="logo"><a href="index.html"><img src="Images/Logo.png" alt="VGC Hub"></a></li>
+                <li><a href="Sites/BattleNote.html">BattleNote</a></li>
+                <li><a href="Sites/VGCHistory.html">VGCHistory</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="description">
+            <h1>Welcome to VGC Hub</h1>
+            <p>VGC Hub is a comprehensive online platform catering to the vibrant community of Pokémon enthusiasts, particularly focused on the Video Game Championships (VGC). With a sleek and intuitive design, VGC Hub serves as a central hub for all things related to competitive Pokémon gaming. From the latest news and updates to in-depth analysis and strategy guides, VGC Hub offers valuable resources to both seasoned competitors and newcomers alike. Explore a rich database of Pokémon species with our integrated Pokédex, and discover a curated selection of useful links for enhancing your gaming experience. Join us at VGC Hub and embark on an exciting journey through the dynamic world of competitive Pokémon gaming.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VGC Nexus. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top">Back to Top</button>
+
+    <script>
+        // JavaScript for interactive elements
+
+        // Back to Top button functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Menu toggle for mobile view
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Close menu on link click
+        navUl.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 769) {
+                    navUl.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

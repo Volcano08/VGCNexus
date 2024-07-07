@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGC Nexus - History</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f8f8f8;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f8f8f8;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        .description {
+            text-align: center;
+            margin-top: 150px;
+            padding: 20px;
+        }
+
+        .description h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .description p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #222;
+            color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top:hover {
+            background-color: #e5533c;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                background-color: #222;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                display: none;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                color: #f8f8f8;
+                font-size: 1.5em;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        /* New Styles for VGC History Sections */
+        #history, #past-champions, #memorable-matches, #meta-evolution, #rule-changes, #community-impact {
+            padding: 50px 20px;
+        }
+
+        #history h1, #past-champions h2, #memorable-matches h2, #meta-evolution h2, #rule-changes h2, #community-impact h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #history p, #past-champions p, #memorable-matches p, #meta-evolution p, #rule-changes p, #community-impact p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .champion-image, .game-logo {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #ccc;
+        }
+        
+        .champion-article img {
+            width: 150px;
+            height: auto;
+            float: left;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .generation-logo img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="menu-toggle">&#9776;</span>
+            <ul>
+                <li><a id="url1" href="Sites/PokeSearch.html">PokeSearch</a></li>
+                <li><a href="Sites/VGCFlip.html">VGCFlip</a></li>
+                <li class="logo"><a href="index.html"><img src="../Images/Logo.png" alt="VGC Hub"></a></li>
+                <li><a href="Sites/BattleNote.html">BattleNote</a></li>
+                <li><a href="VGCHistory.html">VGC History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="history" class="description">
+            <h1>History of VGC</h1>
+            <p>The Pokémon Video Game Championships (VGC) began in 2009, growing into a global phenomenon that draws top trainers from around the world. Starting with Pokémon Diamond and Pearl, the VGC has seen significant changes in rules, formats, and competitive strategies. Let's delve into the history of VGC, starting with Generation IV.</p>
+        </section>
+
+        <section id="past-champions">
+            <h2>Past Champions</h2>
+            <p>Here is a list of past VGC World Champions year by year, including their names, countries, winning teams, and PokePaste links.</p>
+            <ul>
+                <li><strong>2009</strong> - Champion: Kazuyuki Tsuji (Japan)
+                    <ul>
+                        <li>Team: Empoleon, Snorlax, Metagross, Toxicroak, Ludicolo, Salamence</li>
+                        <li><a href="https://pokepast.es/6d2b71540d30d8b4">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Kazuyuki Tsuji.png" alt="Kazuyuki Tsuji">
+                            <div class="image-caption">Kazuyuki Tsuji (2009)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2010</strong> - Champion: Ray Rizzo (USA)
+                    <ul>
+                        <li>Team: Dialga, Kyogre, Groudon, Ludicolo, Hariyama, Cresselia</li>
+                        <li><a href="https://pokepast.es/10df6d5c0da9f3a0">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Ray Rizzo.png" alt="Ray Rizzo">
+                            <div class="image-caption">Ray Rizzo (2010)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2011</strong> - Champion: Ray Rizzo (USA)
+                    <ul>
+                        <li>Team: Thundurus, Gothitelle, Terrakion, Escavalier, Conkeldurr, Hydreigon</li>
+                        <li><a href="https://pokepast.es/d274ef1cc3c16703">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Ray Rizzo.png" alt="Ray Rizzo">
+                            <div class="image-caption">Ray Rizzo (2011)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2012</strong> - Champion: Ray Rizzo (USA)
+                    <ul>
+                        <li>Team: Garchomp, Rotom-Wash, Metagross, Tyranitar, Hydreigon, Cresselia</li>
+                        <li><a href="https://pokepast.es/88ff22792d1613b2">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Ray Rizzo.png" alt="Ray Rizzo">
+                            <div class="image-caption">Ray Rizzo (2012)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2013</strong> - Champion: Arash Ommati (Italy)
+                    <ul>
+                        <li>Team: Tornadus, Mamoswine, Heatran, Latios, Amoonguss, Conkeldurr</li>
+                        <li><a href="https://pokepast.es/8ba66a8882ae8a4f">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Arash Ommati.png" alt="Arash Ommati">
+                            <div class="image-caption">Arash Ommati (2013)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2014</strong> - Champion: Se Jun Park (South Korea)
+                    <ul>
+                        <li>Team: Pachirisu, Gothitelle, Gardevoir, Mega Gyarados, Talonflame, Garchomp</li>
+                        <li><a href="https://pokepast.es/3ffcf0220967f445">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Sejun Park.png" alt="Se Jun Park">
+                            <div class="image-caption">Se Jun Park (2014)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2015</strong> - Champion: Shoma Honami (Japan)
+                    <ul>
+                        <li>Team: Mega Kangaskhan, Heatran, Thundurus, Landorus-Therian, Cresselia, Amoonguss</li>
+                        <li><a href="https://pokepast.es/a171756e0d3aaa66">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Shoma Honami.png" alt="Shoma Honami">
+                            <div class="image-caption">Shoma Honami (2015)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2016</strong> - Champion: Wolfe Glick (USA)
+                    <ul>
+                        <li>Team: Mega Rayquaza, Primal Kyogre, Mega Gengar, Hitmontop, Raichu, Bronzong</li>
+                        <li><a href="https://pokepast.es/15b011e74f43d99d">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Wolfe Glick.png" alt="Wolfe Glick">
+                            <div class="image-caption">Wolfe Glick (2016)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2017</strong> - Champion: Ryota Otsubo (Japan)
+                    <ul>
+                        <li>Team: Krookodile, Whimsicott, Tapu Fini, Alolan Marowak, Celesteela, Tapu Koko</li>
+                        <li><a href="https://pokepast.es/950873d0f8d70e80">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Ryota Otsubo.png" alt="Ryota Otsubo">
+                            <div class="image-caption">Ryota Otsubo (2017)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2018</strong> - Champion: Paul Ruiz (Ecuador)
+                    <ul>
+                        <li>Team: Mega Salamence, Tapu Koko, Incineroar, Gastrodon, Snorlax, Kartana</li>
+                        <li><a href="https://pokepast.es/11059d3ce77dc782">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Paul Ruiz.png" alt="Paul Ruiz">
+                            <div class="image-caption">Paul Ruiz (2018)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2019</strong> - Champion: Naoto Mizobuchi (Japan)
+                    <ul>
+                        <li>Team: Lunala, Primal Groudon, Incineroar, Mega Salamence, Tapu Fini, Stakataka</li>
+                        <li><a href="https://pokepast.es/18ab5e061d54d99e">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Naoto Mizobuchi.png" alt="Naoto Mizobuchi">
+                            <div class="image-caption">Naoto Mizobuchi (2019)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2022</strong> - Champion: Eduardo Cunha (Portugal)
+                    <ul>
+                        <li>Team: Zacian-Crowned, Calyrex-Shadow Rider, Incineroar, Rillaboom-Gmax, Gastrodon East, Thundurus</li>
+                        <li><a href="https://pokepast.es/040ead165b7a1072">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Eduardo Cunha.png" alt="Eduardo Cunha">
+                            <div class="image-caption">Eduardo Cunha (2022)</div>
+                        </div>
+                    </ul>
+                </li>
+                <li><strong>2023</strong> - Champion: Shohei Kimura (Japan)
+                    <ul>
+                        <li>Team: Landorus-Therian, Urshifu-Rapid-Strike, Flutter Mane, Chien-Pao, Amoonguss, Iron Hands</li>
+                        <li><a href="https://pokepast.es/5ca09f007dcd8797">PokePaste</a></li>
+                        <div class="image-container">
+                            <img class="champion-image" src="../Images/Champions/Shohei Kimura.png" alt="Shohei Kimura">
+                            <div class="image-caption">Shohei Kimura (2023)</div>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="memorable-matches">
+            <h2>Memorable Matches</h2>
+            <p>Summaries and analyses of the most memorable matches in VGC history.</p>
+            <article>
+                <h3>2014 World Championships Final: Se Jun Park vs. Jeudy Azzarelli</h3>
+                <p>Se Jun Park's unexpected use of Pachirisu captivated audiences and led to one of the most memorable moments in VGC history. His clever strategies and unique team composition brought him victory.</p>
+                <a href="https://www.youtube.com/watch?v=oNSkPn6o2Cw">Watch the Replay</a>
+            </article>
+            <article>
+                <h3>2016 World Championships Final: Wolfe Glick vs. Jonathan Evans</h3>
+                <p>Wolfe Glick's precise plays and team synergy, featuring Mega Rayquaza and Primal Kyogre, earned him the championship title. His strategic use of Trick Room and support Pokémon was exemplary.</p>
+                <a href="https://www.youtube.com/watch?v=kKz8imK_IVQ">Watch the Replay</a>
+            </article>
+        </section>
+
+        <section id="meta-evolution">
+            <h2>Evolution of the Metagame</h2>
+            <p>Explore the changes in the VGC metagame across different generations, starting with Generation IV.</p>
+            <article class="generation-logo">
+                <h3>Generation IV (Diamond and Pearl)</h3>
+                <p>The VGC scene began with Pokémon Diamond and Pearl. Key mechanics introduced included the Physical/Special split, which significantly impacted battle strategies. Commonly used Pokémon included Garchomp, Togekiss, and Metagross.</p>
+                <div class="image-container">
+                    <img class="game-logo" src="../Images/Game Logo/Gen 4.png" alt="Generation IV">
+                    <div class="image-caption">Generation IV</div>
+                </div>
+            </article>
+            <article class="generation-logo">
+                <h3>Generation V (Black and White)</h3>
+                <p>Generation V brought new abilities and Dream World Pokémon, which diversified team compositions. Weather teams became dominant with Pokémon like Tyranitar and Politoed setting the stage for Sand and Rain teams.</p>
+                <div class="image-container">
+                    <img class="game-logo" src="../Images/Game Logo/Gen 5.png" alt="Generation V">
+                    <div class="image-caption">Generation V</div>
+                </div>
+            </article>
+            <article class="generation-logo">
+                <h3>Generation VI (X and Y)</h3>
+                <p>With the introduction of Mega Evolutions, the metagame saw Pokémon like Mega Kangaskhan and Mega Salamence rise to prominence. This generation also introduced Fairy-type Pokémon, adding a new dynamic to team building.</p>
+                <div class="image-container">
+                    <img class="game-logo" src="../Images/Game Logo/Gen 6.png" alt="Generation VI">
+                    <div class="image-caption">Generation VI</div>
+                </div>
+            </article>
+            <article class="generation-logo">
+                <h3>Generation VII (Sun and Moon)</h3>
+                <p>Z-Moves provided powerful one-time use attacks that could turn the tide of battle. The Tapu guardians, particularly Tapu Koko and Tapu Lele, were frequently seen in competitive play for their terrain control.</p>
+                <div class="image-container">
+                    <img class="game-logo" src="../Images/Game Logo/Gen 7.png" alt="Generation VII">
+                    <div class="image-caption">Generation VII</div>
+                </div>
+            </article>
+            <article class="generation-logo">
+                <h3>Generation VIII (Sword and Shield)</h3>
+                <p>Dynamax mechanics introduced temporary boosts in power and size, altering battle dynamics significantly. Pokémon like Dragapult, Togekiss, and Excadrill were popular choices.</p>
+                <div class="image-container">
+                    <img class="game-logo" src="../Images/Game Logo/Gen 8.png" alt="Generation VIII">
+                    <div class="image-caption">Generation VIII</div>
+                </div>
+            </article>
+            <article class="generation-logo">
+                <h3>Generation IX (Scarlet and Violet)</h3>
+                <p>Terastal Phenomenon introduced unique strategies, allowing Pokémon to change their type temporarily. Popular choices included Flutter Mane, Iron Bundle, and Arcanine.</p>
+                <div class="image-container">
+                    <img class="game-logo" src="../Images/Game Logo/Gen 9.png" alt="Generation IX">
+                    <div class="image-caption">Generation IX</div>
+                </div>
+            </article>
+        </section>
+
+        <section id="rule-changes">
+            <h2>Rule Changes and Format Shifts</h2>
+            <p>Documenting the evolution of rules and formats in VGC.</p>
+            <article>
+                <h3>2010: Introduction of Double Battles</h3>
+                <p>VGC officially adopted Double Battles as the standard format, which required players to develop new strategies focusing on synergy and coordination between two active Pokémon.</p>
+            </article>
+            <article>
+                <h3>2016: Restricted Pokémon Rules</h3>
+                <p>This format allowed the use of two restricted legendary Pokémon per team, leading to diverse and powerful team compositions. Popular choices included Primal Groudon and Xerneas.</p>
+            </article>
+            <article>
+                <h3>2019: Introduction of Dynamax</h3>
+                <p>The Dynamax phenomenon, introduced in Pokémon Sword and Shield, allowed Pokémon to grow in size and power temporarily, drastically changing competitive play dynamics.</p>
+            </article>
+        </section>
+
+        <section id="community-impact">
+            <h2>Community and Cultural Impact</h2>
+            <p>Highlighting the growth and cultural significance of the VGC community.</p>
+            <article>
+                <h3>Growth of Online Communities</h3>
+                <p>Platforms like Twitch and YouTube have played a crucial role in bringing VGC content to a global audience. Influential players like Wolfe Glick and Aaron Zheng have contributed to the community through streaming and educational content.</p>
+            </article>
+            <article>
+                <h3>Significant Milestones</h3>
+                <p>The first VGC World Championship in 2009 marked a significant milestone, establishing a global stage for competitive Pokémon battles. Subsequent expansions of regional championships have continued to grow the competitive scene.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VGC Nexus. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top">Back to Top</button>
+
+    <script>
+        // JavaScript for interactive elements
+        // Back to Top button functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Menu toggle for mobile view
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Close menu on link click
+        navUl.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 769) {
+                    navUl.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
